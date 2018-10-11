@@ -8,30 +8,30 @@ import java.util.Scanner;
 
 public class Inventory {
 
-	Map<String, Product> inventory = new HashMap<>();
+	private Map<String, Product> products = new HashMap<>();
 
 	public void stock() throws Exception {
 
-		File newFile = new File("/Users/abigailruminas/workspace/m1-java-capstone-vending-machine",
-				"vendingmachine.csv");
+		File newFile = new File("vendingmachine.csv");
 
 		try (Scanner fileReader = new Scanner(newFile)) {
 
 			while (fileReader.hasNextLine()) {
 				String currentLine = fileReader.nextLine();
-				String[] itemArray = currentLine.split("|");
+				String[] itemArray = currentLine.split("\\|");
 				String slotId = itemArray[0];
 				String name = itemArray[1];
 				BigDecimal price =new BigDecimal(itemArray[2]);
 				String type = itemArray[3];
 				Product item = new Product(type, name, price, 5);
-				inventory.put(slotId, item);
-				
-
+				products.put(slotId, item);
 			}
 
 		}
 
+	}
+	public Map<String, Product> getProducts() {
+		return products;
 	}
 }
 
