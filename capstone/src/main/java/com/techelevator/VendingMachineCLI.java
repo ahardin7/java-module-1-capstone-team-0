@@ -5,6 +5,7 @@ import java.util.Map;
 import com.techelevator.view.Menu;
 
 public class VendingMachineCLI {
+	
 
 	private VendingMachine vm = new VendingMachine();
 	private static final String MAIN_MENU_OPTION_DISPLAY_ITEMS = "Display Vending Machine Items";
@@ -30,11 +31,15 @@ public class VendingMachineCLI {
 					Inventory inventory = vm.getInventory();
 					for(Map.Entry<String, Product> entry : inventory.getProducts().entrySet()) {
 						Product p = (Product)entry.getValue();
-						System.out.println(p.getName() + ": " + p.getPrice() +  " " + p.getQuantity() + " " + p.getType());
+						System.out.println(p.getSlotId() + " " + p.getName() + ": " + p.getPrice() +  " " + p.getQuantity());
 					}
 					// display vending machine items - good place for a method call
 				} else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
 					// do purchase - good place for a method call
+					vm.getBank().getMoney();
+					
+					
+					
 				} else if (choice.equals(MAIN_MENU_OPTION_EXIT)) {
 					// do any end of program processing - good place for a method call
 					shouldLoop = false;

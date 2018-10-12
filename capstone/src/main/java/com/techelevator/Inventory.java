@@ -5,10 +5,11 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class Inventory {
 
-	private Map<String, Product> products = new HashMap<>();
+	private Map<String, Product> products = new TreeMap<>();
 
 	public void stock() throws Exception {
 
@@ -23,7 +24,7 @@ public class Inventory {
 				String name = itemArray[1];
 				BigDecimal price =new BigDecimal(itemArray[2]);
 				String type = itemArray[3];
-				Product item = new Product(type, name, price, 5);
+				Product item = new Product(slotId, type, name, price, 5);
 				products.put(slotId, item);
 			}
 

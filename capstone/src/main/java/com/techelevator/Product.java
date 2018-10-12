@@ -8,15 +8,22 @@ public class Product {
 	private String name;
 	private BigDecimal price;
 	private int quantity;
+	private String slotId;
 	
 	
-	public Product(String type, String name, BigDecimal price, int quantity) {
+	public Product(String slotId, String type, String name, BigDecimal price, int quantity) {
 		
+		this.slotId = slotId;
 		this.type = type;
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 		
+		
+	}
+	
+	public String getSlotId() {
+		return slotId;
 	}
 
 
@@ -38,6 +45,7 @@ public class Product {
 	public int getQuantity() {
 		return quantity;
 	}
+	
 	
 	
 	
