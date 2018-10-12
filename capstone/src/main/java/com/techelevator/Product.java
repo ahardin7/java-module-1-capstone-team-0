@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 
 public class Product {
 	 
@@ -22,6 +23,12 @@ public class Product {
 		
 	}
 	
+	
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+
 	public String getSlotId() {
 		return slotId;
 	}

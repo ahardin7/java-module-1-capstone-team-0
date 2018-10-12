@@ -24,7 +24,7 @@ public class Bank {
 			 || cashIn.equals(new BigDecimal(5))
 			 || cashIn.equals(new BigDecimal(10))) {
 				balance = balance.add(cashIn);
-				System.out.println("current balance: " + balance.toString());
+				System.out.println("current balance: $" + balance.toString());
 			}
 			else {
 				System.out.println("Invalid Input please enter 1,2,5 or 10");
@@ -35,6 +35,7 @@ public class Bank {
 			if(customerWantsMore.toLowerCase().equals("n")) {
 				break;
 			}
+			
 	}				
 }
 }

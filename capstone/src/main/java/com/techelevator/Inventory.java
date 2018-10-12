@@ -26,6 +26,7 @@ public class Inventory {
 				String type = itemArray[3];
 				Product item = new Product(slotId, type, name, price, 5);
 				products.put(slotId, item);
+				
 			}
 
 		}
@@ -33,6 +34,10 @@ public class Inventory {
 	}
 	public Map<String, Product> getProducts() {
 		return products;
+	}
+	public Product findProduct(String slotId) {
+		Product selectedProduct = products.get(slotId);
+		return selectedProduct;
 	}
 }
 
