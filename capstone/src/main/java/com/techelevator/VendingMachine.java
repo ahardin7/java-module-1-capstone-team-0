@@ -23,14 +23,14 @@ public class VendingMachine {
 		bank.withdraw(customerProduct.getPrice());
 	}
 
-	public void createChange () {
-		while(true) {
+//	public void createChange () {
+//		while(true) { 
 			
-		}
+//		}
 			
-		Bank currentBalance.
+//		Bank currentBalance.
 		
-	}
+//	}
 
 	public Bank getBank() {
 		return bank;

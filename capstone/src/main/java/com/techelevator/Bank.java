@@ -40,4 +40,30 @@ public class Bank {
 		balance = balance.subtract(amountToWithdraw);
 			return balance;
 	}
-}
+	public void change () {
+		BigDecimal quarterValue = new BigDecimal("0.25");
+		BigDecimal dimeValue = new BigDecimal("0.10");
+		BigDecimal nickelValue = new BigDecimal("0.05");
+		int numberOfDimes = 0;
+		int numberOfQuarters = 0;
+		int numberOfNickels = 0;
+		while ((balance.compareTo(quarterValue) > -1)){
+			balance = balance.subtract(quarterValue);
+			numberOfQuarters = numberOfQuarters + 1;
+		}
+	    while ((balance.compareTo(dimeValue) > -1)) {
+	    	balance = balance.subtract(dimeValue);
+	    	numberOfDimes = numberOfDimes + 1;
+	    }
+	    while ((balance.compareTo(nickelValue) > -1)) {
+	    	balance = balance.subtract(nickelValue);
+	    	numberOfNickels = numberOfNickels + 1;
+	    }
+	    System.out.println("Your change is - " + numberOfQuarters + " Quarter(s), " + numberOfDimes + " Dime(s), and "
+	            + numberOfNickels + " Nickel(s).");
+	    
+			
+		}
+		
+	}
+

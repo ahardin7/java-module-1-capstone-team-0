@@ -53,6 +53,7 @@ public class VendingMachineCLI {
 							// This is where you prompt the user for the slotID, and then call vm.purchase(slotID)
 						}
 						else if (purchaseChoice.equals(PURCHASE_MENU_OPTION_COMPLETE_TRANSACTION)) {
+							vm.getBank().change();
 							// Return any change to user, and then leave the purchase menu loop
 							shouldLoopPurchase = false;
 						}
